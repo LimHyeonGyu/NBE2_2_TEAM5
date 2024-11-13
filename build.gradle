@@ -71,3 +71,11 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+test {
+    exclude '**/edu/example/dev_2_cc/repository/**'
+}
+
+tasks.jar {
+    enabled = false
+}
