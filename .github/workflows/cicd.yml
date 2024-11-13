@@ -13,13 +13,16 @@ jobs:
     # 실행 스텝 지정
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
           java-version: '17'
 
       - run: touch ./src/main/resources/application.properties
+
       - run: echo "${{secrets.APPLICATION}}" > ./src/main/resources/application.properties
+
       - uses: actions/upload-artifact@v3
         with:
           name: application.properties

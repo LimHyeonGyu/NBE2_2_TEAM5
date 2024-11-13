@@ -73,7 +73,7 @@ tasks.named('test') {
 }
 
 test {
-    exclude '**/edu/example/dev_2_cc/repository/**'
+    exclude '**/edu/example/dev_2_cc/**'
 }
 
 tasks.jar {
